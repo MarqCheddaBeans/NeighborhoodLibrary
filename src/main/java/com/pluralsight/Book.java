@@ -7,17 +7,17 @@ public class Book {
     private String title;
     private String author;
     private String isbn;
-    private boolean isCheckedOut;
-    private String checkedOutTo;
+    public boolean isCheckedOut;
+    public String checkedOutTo;
 
     //Constructor
-    public Book(int id, String title, String author ,String isbn){
+    public Book(int id, String title, String author ,String isbn, boolean isCheckedOut, String checkedOutTo){
         this.id = id;
         this.title = title;
         this.author = author;
         this.isbn = isbn;
-        this.isCheckedOut = false;
-        this.checkedOutTo = "";
+        this.isCheckedOut = isCheckedOut;
+        this.checkedOutTo = checkedOutTo;
     }
 
     //Getters
@@ -37,7 +37,7 @@ public class Book {
     }
     //Display book info
     public void displayInfo(){
-        System.out.println("ID: " + id + "Title: " + title + "Author: " + author + " | ISBN: " + isbn + " | Checked Out: " + (isCheckedOut ? "Yes" : "No") + (isCheckedOut ? " | To: " + checkedOutTo : ""));
+        System.out.println("ID: " + id + " Title: " + title + " Author: " + author + " | ISBN: " + isbn + " | Checked Out: " + (isCheckedOut ? "Yes" : "No") + (isCheckedOut ? " | To: " + checkedOutTo : ""));
     }
 
 }
